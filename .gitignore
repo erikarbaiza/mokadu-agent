@@ -1,0 +1,7 @@
+.env
+conversations.json
+baileys/auth_info/
+baileys/node_modules/
+__pycache__/
+*.pyc
+.DS_Store
