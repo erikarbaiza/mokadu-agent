@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mokadu-agent
+    runtime: docker
+    plan: free
+    envVars:
+      - key: DATA_DIR
+        value: /tmp
+      - key: AUTH_DIR
+        value: /tmp/auth_info
+      - key: ANTHROPIC_API_KEY
+        sync: false

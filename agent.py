@@ -117,7 +117,7 @@ def get_schedule_context() -> str:
 class MokaduAgent:
     """Agente de conversación con memoria persistente por número de teléfono."""
 
-    CONVERSATIONS_FILE = Path(__file__).parent / "conversations.json"
+    CONVERSATIONS_FILE = Path(os.getenv("DATA_DIR", str(Path(__file__).parent))) / "conversations.json"
     MAX_HISTORY = 20          # Máximo de mensajes en memoria por usuario
     SESSION_TIMEOUT_H = 24    # Horas sin actividad para reiniciar contexto
 

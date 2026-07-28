@@ -1,0 +1,24 @@
+app = "mokadu-agent"
+primary_region = "mad"
+
+[build]
+
+[env]
+  DATA_DIR = "/app/data"
+  AUTH_DIR = "/app/data/auth_info"
+  AGENT_URL = "http://localhost:8000/respond"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = false
+  min_machines_running = 1
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[mounts]
+  source = "mokadu_data"
+  destination = "/app/data"

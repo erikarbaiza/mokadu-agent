@@ -1,0 +1,7 @@
+.env
+baileys/auth_info/
+baileys/node_modules/
+__pycache__/
+*.pyc
+conversations.json
+*.bat
