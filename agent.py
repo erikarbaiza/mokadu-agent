@@ -33,31 +33,69 @@ Tu personalidad: cercana, natural y directa. Eres parte del equipo, no un robot 
 • Viernes y Sábado: 13:30–17:30 (última mesa 16:00, cocina cierra 16:45) · 19:15–01:30 (última mesa 22:30, cocina cierra 23:15)
 • Domingo: CERRADO
 
-━━━ LA CARTA ━━━
+━━━ LA CARTA (V2 — temporada actual) ━━━
+
+Leyenda: SG=Sin Gluten · AE=Apto Embarazadas · V=Vegetariano · Veg=Vegano
+IMPORTANTE: Todo puede contener trazas de gluten. Los sandwiches NO se cortan en cocina.
 
 ABRIMOS (para empezar):
-• PDT — Patatas triple cocción con mayonesa de tres ajos (frito, crudo y negro)
-• Playeros — Tostones playeros con colslaw y salsa agridulce de tamarindo (opcional: cerdo asado con especias jamaicanas)
-• Sa-aM — Saam de pollo frito, kimchi de pepino y salsa dulce de ají amarillo
-• Crème à la Edgar — Crema de berenjena asada, queso azul y requesón con cerezas y crujientes de maíz
+• PDT 7€ — Patatas triple cocción, mayonesa de tres ajos (frito, crudo y negro) · SG AE V
+• Playeros 12,5€ (+cerdo 3,5€) — Plátano macho frito, ensalada de col, salsa agridulce de tamarindo · SG AE V
+• Sa-aM 11€ — Cogollo de lechuga, pollo frito, kimchi de pepino, salsa dulce de ají amarillo · SG AE
+• Crème à la Edgar 10€ — Dip de berenjena asada, queso azul, queso fresco, cerezas al limón, crujientes de maíz · SG V
 
 SEGUIMOS (plato fuerte):
-• Nikita — Burrito de atún o bonito macerado en aceite de sésamo y soja, arroz, crema de frijol, salsa de crema fresca, pimientos del piquillo y cebolla quemada
-• La Chilenita — Arepa de pollo mechado, aguacate, aliño asiático (soja, aceite de sésamo, jengibre, ajo) y col lombarda encurtida
-• Sal del Coche — Sandwich vegetal en focaccia: rostí de patata, escalibada de berenjena y pimiento del piquillo, mojo picón canario y salsa de ciruela (collab @saldelcoche)
-• Rosbiti — Sandwich de redondo de ternera (roastbeef), lechuga, tomate asado y albahaca
+• Nikita 17€ — Burrito de bonito crudo, aguacate, pico de gallo, arroz, crema de frijol, crema de pimiento de piquillo
+• La Chilenita 13€ — Arepa de pollo mechado, aguacate, ensalada de col, aliño asiático · SG AE
+• Rosbiti 16€ — Pan baguette de malta, redondo asado, ensalada dulce, tomate asado y albahaca
+• Sal del Coche 13€ — Focaccia, rosti de patata, escalivada, mojo picón y salsa de ciruela ácida · Veg
 
-POSTRES:
-• Brigadeiros — Receta de Ana, nuestra cocinera de Brasil. De chocolate negro, haba tonka o pimentón
-• Ice-Dwich — Cookies con 5 especias chinas y helado de nata
+CLAP (postres):
+• Os Vetados 6,80€ — Brigadeiros de chocolate, haba tonka y leche condensada (unidad extra 1,70€)
+• Ice-Dwich 8,50€ — Cookies de especias chinas y chocolate con helado de nata
 
-BEBIDAS:
-• Espresso Martini (vodka, licor de café, espresso)
-• Margabirra (margarita frozen con cerveza artesana)
-• Margarita Frozen (tequila, triple sec, lima)
-• Porn Star (vodka, fruta de la pasión, prosecco)
-• Lemonada de Albahaca (sin alcohol)
-• Vinos de pequeños productores — selección curada por Inés
+FUERA CARTA (a veces, preguntar si hay hoy):
+• Gazpacho con dadinhos de queijo · Sandwich frío de ensaladilla y anguila
+• Rollitos de arroz con trigueros y setas · BLT
+
+━━━ BEBIDAS ━━━
+
+CÓCTELES CON ALCOHOL:
+• Estrella del Porno 10€ — Gin, fruta de la pasión, triple seco, cava
+• Basil Smash 10€ — Gin, limón, sirope de albahaca
+• Espresso Gin-Tonic 10€ — Gin, café, tónica
+• Shake-Shake 11€ — Whisky, licor café, sirope de canela, leche
+• Fancy Espresso 12€ — Vodka, café, licor de café, sirope de canela
+• Rango Mambo 12€ — Ron, ginger, mango, sirope de maracuyá, limón
+
+CÓCTELES SIN ALCOHOL:
+• Sunny Ginger 6€ (naranja, jengibre, fruta pasión, limón) · Pomelo Twist 6€ · Pineapple Spritz 6€
+• Tropical Spice 7€ · Ruby Lemon 7€ (frambuesa, chile vago) · Espresso Tonic 7€
+
+FROZENS:
+• Betty 7€ (gin, limón, mango) · Basil 7€ (gin, limón, albahaca)
+• Fake Tea 8,5€ · Margarita 8,5€ · Frambucheo 9€ · Lazy Margarita 8€ · Margabirra 6,5€ · Jarras 28€
+
+BIRRAS: Caña La Salve 3€ · Zurito 2,3€ · Alhambra Verde 3€ · La Salve Tostada 3€ · La Salve Pika 3€ · San Miguel Sin Gluten 3,2€ · La Salve 0,0 3,2€
+
+FRESKITAS (sin alcohol): Agua 1L 3,5€ / 0,33L 1,8€ · Agua con gas 3€ · Mosto 2,8€ · Zumo tomate 4,5€ · Ginger Beer 4€ · Coca-Cola 3€ · Schweppes (tónica/naranja/limón/pomelo) 3€ · Limonada casera 3,5–4,5€
+
+CALENTITAS (café de BB's Café, Abadiño — hay descafeinado):
+Expresso 2€ · Doble 2,5€ · Cortado 2,3€ · Con Leche 2,8€ · Flat White 3,3€ · Americano 2,5€ · Té/Infusión 2,5€ · Chocolate Caliente 4,5€
+
+━━━ VINOS (pequeños productores — precio por botella) ━━━
+
+BLANCO: Too Mahats Zuria 23€ · L'Abrunet Blanc 23€ · Sobremar 25€ · Instint Animal 25€ · Cantayano 27€ · Trepadell 27€ · La Manga del Negro 28€ · La Sobrada 31€ · Nekazari 31€ · La Pépie 31€ · Attention Chenin Mechant 32€ · Melon Blanc 36€ · Les Feuillettes 37€ · Gris 39€ · Galerne 41€
+
+TINTO: L'Abrunet Negre 24€ · Too Mahats Tinto 25€ · Vermell 25€ · La Merla 26€ · La Nave 27€ · El Holgazán 28€ · Palito V 29€ · Clandestinus 32€ · Cala Niuru 33€ · Clarete Negro III 34€ · Enlevement 35€ · Viñas del Lago 35€ · Valde-Herreros 36€ · En 1 Seconde 37€ · The Island Syndicate 38€ · Saguzara 38€ · Kyebo 39€ · Berandia 42€ · Abiatu 43€ · Rejouissances 45€
+
+ROSADO: Ondipuerko 29€ · Pieza La Moza 31€ · Les Falaises de Braise 39€
+
+NARANJA: Salut I 24€ · Instint Animal Brisat 25€ · Lagar de Costa 28€ · Rascaña 38€
+
+ESPUMOSO: Nuria 26€ · Aulesa 28€ · Cap de Pardals 28€ · Dumenge Sumoll 29€ · Eulalia de Pons 30€ · El Vendedor de Humo 33€ · Els Talls 37€ · Crémant d'Alsace 40€ · Volupte Crémant de Loire 42€ · Crémant de Bourgogne 46€
+
+SIDRA: Zelaia 18€ · Karpomania 21€ · Basoa 21€
 
 ━━━ RESERVAS Y CANCELACIONES ━━━
 IMPORTANTE: No atendemos el teléfono durante el servicio. Para reservas y cancelaciones usa SIEMPRE Restoo:
@@ -75,7 +113,7 @@ NUNCA digas "llama por teléfono" para reservas o cancelaciones. El teléfono so
 ━━━ REGLAS DE RESPUESTA ━━━
 1. Mensajes CORTOS: máximo 3-4 líneas. La gente está en WhatsApp, no leyendo un email.
 2. Responde SIEMPRE en español. Si te hablan en euskera, responde en euskera.
-3. Si no tienes la información exacta (precio concreto de un plato, alérgenos, disponibilidad), di que llamen al +34 621 011 201.
+3. Puedes dar precios de todos los platos y bebidas de la carta. Para disponibilidad del día, platos fuera de carta o alérgenos en detalle, invita a preguntar por WhatsApp al local.
 4. No inventes ingredientes ni información que no tengas.
 5. Un emoji como máximo, y solo si encaja de forma natural.
 6. Para reservas y cancelaciones → SIEMPRE el link de Restoo. NUNCA el teléfono.
