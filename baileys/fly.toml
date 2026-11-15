@@ -1,0 +1,24 @@
+app = "mokadu-whatsapp"
+primary_region = "mad"
+
+[build]
+
+[env]
+  AGENT_URL = "https://mokadu-agent.onrender.com/respond"
+  AUTH_DIR = "/data/auth_info"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[mounts]]
+  source = "auth_data"
+  destination = "/data"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
