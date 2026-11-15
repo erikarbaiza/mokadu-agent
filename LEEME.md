@@ -138,16 +138,17 @@ ngrok http 8000
 
 ```
 mokadu-agent/
-├── agent.py          # Núcleo del agente (Claude + memoria)
-├── server.py         # Servidor FastAPI (Twilio + Meta + Baileys)
-├── test_chat.py      # Tester de consola
-├── requirements.txt  # Dependencias Python
-├── .env.example      # Plantilla de configuración
+├── config.json        # Datos del restaurante (editar esto para cada cliente)
+├── agent.py           # Núcleo del agente (Claude + memoria)
+├── server.py          # Servidor FastAPI (Twilio + Meta + Baileys)
+├── test_chat.py       # Tester de consola
+├── requirements.txt   # Dependencias Python
+├── .env.example       # Plantilla de credenciales
 ├── conversations.json # Historial de conversaciones (se crea automáticamente)
 └── baileys/
-    ├── index.js      # Bridge WhatsApp Web
-    ├── package.json  # Dependencias Node.js
-    └── auth_info/    # Sesión de WhatsApp (se crea al escanear el QR)
+    ├── index.js       # Bridge WhatsApp Web
+    ├── package.json   # Dependencias Node.js
+    └── auth_info/     # Sesión de WhatsApp (se crea al escanear el QR)
 ```
 
 ---
@@ -160,7 +161,7 @@ mokadu-agent/
 - Twilio sandbox: gratis para probar, luego ~0,005 €/mensaje en producción
 
 **¿Qué pasa si le preguntan algo que no sabe?**
-El bot dice que llamen al +34 621 011 201. Nunca inventa información.
+El bot da el teléfono del restaurante (configurado en `config.json`). Nunca inventa información.
 
 **¿Puede hacer reservas?**
 No las gestiona directamente — da el teléfono para reservar. Si en el futuro quieres integrar un sistema de reservas, se puede añadir.

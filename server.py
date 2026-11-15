@@ -16,19 +16,20 @@ from fastapi import FastAPI, Form, Request, Response, HTTPException
 from fastapi.responses import PlainTextResponse
 from dotenv import load_dotenv
 
-from agent import MokaduAgent
+from agent import RestaurantAgent, load_config
 
 load_dotenv()
 
-app = FastAPI(title="MOKADU WhatsApp Agent", version="1.0.0")
-agent = MokaduAgent()
+_cfg = load_config()
+app = FastAPI(title=f"{_cfg['nombre']} WhatsApp Agent", version="1.0.0")
+agent = RestaurantAgent()
 
 
 # ── Health check ──────────────────────────────────────────────────────────────
 
 @app.get("/")
 def health():
-    return {"status": "ok", "bot": "MOKADU WhatsApp Agent 🤌", **agent.stats()}
+    return {"status": "ok", **agent.stats()}
 
 
 # ── Endpoint genérico (usado por Baileys y para testing) ──────────────────────
@@ -79,7 +80,7 @@ async def twilio_webhook(
 
 # ── Meta WhatsApp Cloud API ────────────────────────────────────────────────────
 
-VERIFY_TOKEN = os.getenv("META_VERIFY_TOKEN", "mokadu_secret_2026")
+VERIFY_TOKEN = os.getenv("META_VERIFY_TOKEN", "")
 WHATSAPP_TOKEN = os.getenv("WHATSAPP_TOKEN", "")
 WHATSAPP_PHONE_ID = os.getenv("WHATSAPP_PHONE_NUMBER_ID", "")
 

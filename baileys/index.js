@@ -18,6 +18,12 @@
 
 require("dotenv").config({ path: "../.env" });
 
+const fs = require("fs");
+const path = require("path");
+const cfg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "config.json"), "utf8"));
+const FALLBACK_PHONE = cfg.contacto.telefono;
+const RESTAURANT_NAME = cfg.nombre;
+
 const {
   default: makeWASocket,
   useMultiFileAuthState,
@@ -47,7 +53,7 @@ async function askAgent(phone, message) {
     return res.data.reply;
   } catch (err) {
     console.error("❌ Error al contactar el agente:", err.message);
-    return "Ahora mismo no puedo responder. Llámanos al +34 621 011 201 🙏";
+    return `Ahora mismo no puedo responder. Llámanos al ${FALLBACK_PHONE} 🙏`;
   }
 }
 
@@ -77,14 +83,14 @@ function extractText(msg) {
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState(process.env.AUTH_DIR || "auth_info");
   const { version, isLatest } = await fetchLatestBaileysVersion();
-  console.log(`🤖 MOKADU Bot — WA v${version.join(".")} ${isLatest ? "(latest)" : ""}`);
+  console.log(`🤖 ${RESTAURANT_NAME} Bot — WA v${version.join(".")} ${isLatest ? "(latest)" : ""}`);
 
   const sock = makeWASocket({
     version,
     logger,
     auth: state,
     printQRInTerminal: false, // Usamos qrcode-terminal para mejor visual
-    browser: ["MOKADU Bot", "Chrome", "120.0.0"],
+    browser: [`${RESTAURANT_NAME} Bot`, "Chrome", "120.0.0"],
     connectTimeoutMs: 60000,
     keepAliveIntervalMs: 30000,
   });
@@ -147,7 +153,7 @@ async function startBot() {
 // ── Arranque ──────────────────────────────────────────────────────────────────
 
 console.log("══════════════════════════════════════");
-console.log("  🤌  MOKADU WhatsApp Bot  ");
+console.log(`  🤌  ${RESTAURANT_NAME} WhatsApp Bot  `);
 console.log("══════════════════════════════════════");
 console.log(`  Agente Python en: ${AGENT_URL}`);
 console.log("  Asegúrate de que el servidor Python esté corriendo:");

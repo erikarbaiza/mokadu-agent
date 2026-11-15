@@ -1,0 +1,99 @@
+{
+  "nombre": "MOKADU",
+  "descripcion": "un restaurante en el barrio de Pozas de Bilbao",
+  "personalidad": "cercana, natural y directa. Eres parte del equipo, no un robot corporativo. Hablas con normalidad — sin formalismos pero tampoco con argot excesivo. Nada de \"tío\", \"hermano\", \"macho\" o expresiones demasiado coloquiales. Breve siempre.",
+
+  "contacto": {
+    "direccion": "Licenciado Poza, 34, 48009 Bilbao (barrio de Pozas)",
+    "telefono": "+34 621 011 201",
+    "telefono_display": "621 011 201",
+    "instagram": "@mokadubilbao",
+    "tiktok": "@mokadu.bilbao"
+  },
+
+  "estadisticas": {
+    "resenas": "9,8 sobre 10 (292 reseñas)",
+    "precio_medio": "~30 € por persona",
+    "aforo": "+40 comensales"
+  },
+
+  "reservas_url": "https://mokadu.myrestoo.net/v2?view=reservation&lang=es",
+
+  "horarios": {
+    "lunes":     { "franjas": [] },
+    "martes":    { "franjas": [
+      { "apertura": "13:30", "cierre": "16:30", "ultima_mesa": "15:45", "cierre_cocina": "16:00" },
+      { "apertura": "19:15", "cierre": "23:00", "ultima_mesa": "21:45", "cierre_cocina": "22:15" }
+    ]},
+    "miercoles": { "franjas": [
+      { "apertura": "13:30", "cierre": "16:30", "ultima_mesa": "15:45", "cierre_cocina": "16:00" },
+      { "apertura": "19:15", "cierre": "23:00", "ultima_mesa": "21:45", "cierre_cocina": "22:15" }
+    ]},
+    "jueves":    { "franjas": [
+      { "apertura": "13:30", "cierre": "16:30", "ultima_mesa": "15:45", "cierre_cocina": "16:00" },
+      { "apertura": "19:15", "cierre": "00:15", "ultima_mesa": "21:45", "cierre_cocina": "22:15" }
+    ]},
+    "viernes":   { "franjas": [
+      { "apertura": "13:30", "cierre": "17:30", "ultima_mesa": "16:00", "cierre_cocina": "16:45" },
+      { "apertura": "19:15", "cierre": "01:30", "ultima_mesa": "22:30", "cierre_cocina": "23:15" }
+    ]},
+    "sabado":    { "franjas": [
+      { "apertura": "13:30", "cierre": "17:30", "ultima_mesa": "16:00", "cierre_cocina": "16:45" },
+      { "apertura": "19:15", "cierre": "01:30", "ultima_mesa": "22:30", "cierre_cocina": "23:15" }
+    ]},
+    "domingo":   { "franjas": [] }
+  },
+
+  "carta": {
+    "version": "V2",
+    "leyenda": "SG=Sin Gluten · AE=Apto Embarazadas · V=Vegetariano · Veg=Vegano",
+    "nota_trazas": "Todo puede contener trazas de gluten. Los sandwiches NO se cortan en cocina.",
+    "categorias": [
+      {
+        "nombre": "ABRIMOS (para empezar)",
+        "platos": [
+          { "nombre": "PDT",               "precio": "7€",            "descripcion": "Patatas triple cocción, mayonesa de tres ajos (frito, crudo y negro)",                      "alergenos": "SG AE V" },
+          { "nombre": "Playeros",          "precio": "12,5€ (+cerdo 3,5€)", "descripcion": "Plátano macho frito, ensalada de col, salsa agridulce de tamarindo",             "alergenos": "SG AE V" },
+          { "nombre": "Sa-aM",             "precio": "11€",           "descripcion": "Cogollo de lechuga, pollo frito, kimchi de pepino, salsa dulce de ají amarillo",            "alergenos": "SG AE" },
+          { "nombre": "Crème à la Edgar", "precio": "10€",           "descripcion": "Dip de berenjena asada, queso azul, queso fresco, cerezas al limón, crujientes de maíz",   "alergenos": "SG V" }
+        ]
+      },
+      {
+        "nombre": "SEGUIMOS (plato fuerte)",
+        "platos": [
+          { "nombre": "Nikita",       "precio": "17€", "descripcion": "Burrito de bonito crudo, aguacate, pico de gallo, arroz, crema de frijol, crema de pimiento de piquillo" },
+          { "nombre": "La Chilenita","precio": "13€", "descripcion": "Arepa de pollo mechado, aguacate, ensalada de col, aliño asiático",                                       "alergenos": "SG AE" },
+          { "nombre": "Rosbiti",     "precio": "16€", "descripcion": "Pan baguette de malta, redondo asado, ensalada dulce, tomate asado y albahaca" },
+          { "nombre": "Sal del Coche","precio": "13€","descripcion": "Focaccia, rosti de patata, escalivada, mojo picón y salsa de ciruela ácida",                             "alergenos": "Veg" }
+        ]
+      },
+      {
+        "nombre": "CLAP (postres)",
+        "platos": [
+          { "nombre": "Os Vetados", "precio": "6,80€", "descripcion": "Brigadeiros de chocolate, haba tonka y leche condensada (unidad extra 1,70€)" },
+          { "nombre": "Ice-Dwich",  "precio": "8,50€", "descripcion": "Cookies de especias chinas y chocolate con helado de nata" }
+        ]
+      }
+    ],
+    "fuera_carta": [
+      "Gazpacho con dadinhos de queijo",
+      "Sandwich frío de ensaladilla y anguila",
+      "Rollitos de arroz con trigueros y setas",
+      "BLT"
+    ]
+  },
+
+  "bebidas_texto": "CÓCTELES CON ALCOHOL:\n• Estrella del Porno 10€ — Gin, fruta de la pasión, triple seco, cava\n• Basil Smash 10€ — Gin, limón, sirope de albahaca\n• Espresso Gin-Tonic 10€ — Gin, café, tónica\n• Shake-Shake 11€ — Whisky, licor café, sirope de canela, leche\n• Fancy Espresso 12€ — Vodka, café, licor de café, sirope de canela\n• Rango Mambo 12€ — Ron, ginger, mango, sirope de maracuyá, limón\n\nCÓCTELES SIN ALCOHOL:\n• Sunny Ginger 6€ · Pomelo Twist 6€ · Pineapple Spritz 6€\n• Tropical Spice 7€ · Ruby Lemon 7€ · Espresso Tonic 7€\n\nFROZENS:\n• Betty 7€ (gin, limón, mango) · Basil 7€ (gin, limón, albahaca)\n• Fake Tea 8,5€ · Margarita 8,5€ · Frambucheo 9€ · Lazy Margarita 8€ · Margabirra 6,5€ · Jarras 28€\n\nBIRRAS: Caña La Salve 3€ · Zurito 2,3€ · Alhambra Verde 3€ · La Salve Tostada 3€ · La Salve Pika 3€ · San Miguel Sin Gluten 3,2€ · La Salve 0,0 3,2€\n\nFRESKITAS (sin alcohol): Agua 1L 3,5€ / 0,33L 1,8€ · Agua con gas 3€ · Mosto 2,8€ · Zumo tomate 4,5€ · Ginger Beer 4€ · Coca-Cola 3€ · Schweppes 3€ · Limonada casera 3,5–4,5€\n\nCALENTITAS (café de BB's Café, Abadiño — hay descafeinado):\nExpresso 2€ · Doble 2,5€ · Cortado 2,3€ · Con Leche 2,8€ · Flat White 3,3€ · Americano 2,5€ · Té/Infusión 2,5€ · Chocolate Caliente 4,5€\n\nVINOS (pequeños productores — precio por botella):\n\nBLANCO: Too Mahats Zuria 23€ · L'Abrunet Blanc 23€ · Sobremar 25€ · Instint Animal 25€ · Cantayano 27€ · Trepadell 27€ · La Manga del Negro 28€ · La Sobrada 31€ · Nekazari 31€ · La Pépie 31€ · Attention Chenin Mechant 32€ · Melon Blanc 36€ · Les Feuillettes 37€ · Gris 39€ · Galerne 41€\n\nTINTO: L'Abrunet Negre 24€ · Too Mahats Tinto 25€ · Vermell 25€ · La Merla 26€ · La Nave 27€ · El Holgazán 28€ · Palito V 29€ · Clandestinus 32€ · Cala Niuru 33€ · Clarete Negro III 34€ · Enlevement 35€ · Viñas del Lago 35€ · Valde-Herreros 36€ · En 1 Seconde 37€ · The Island Syndicate 38€ · Saguzara 38€ · Kyebo 39€ · Berandia 42€ · Abiotu 43€ · Rejouissances 45€\n\nROSADO: Ondipuerko 29€ · Pieza La Moza 31€ · Les Falaises de Braise 39€\n\nNARANJA: Salut I 24€ · Instint Animal Brisat 25€ · Lagar de Costa 28€ · Rascaña 38€\n\nESPUMOSO: Nuria 26€ · Aulesa 28€ · Cap de Pardals 28€ · Dumenge Sumoll 29€ · Eulalia de Pons 30€ · El Vendedor de Humo 33€ · Els Talls 37€ · Crémant d'Alsace 40€ · Volupte Crémant de Loire 42€ · Crémant de Bourgogne 46€\n\nSIDRA: Zelaia 18€ · Karpomania 21€ · Basoa 21€",
+
+  "reglas_respuesta": [
+    "Mensajes CORTOS: máximo 3-4 líneas. La gente está en WhatsApp, no leyendo un email.",
+    "Responde SIEMPRE en español. Si te hablan en euskera, responde en euskera. Si te hablan en inglés, responde en inglés.",
+    "Puedes dar precios de todos los platos y bebidas de la carta. Para disponibilidad del día, platos fuera de carta o alérgenos en detalle, invita a preguntar por WhatsApp al local.",
+    "No inventes ingredientes ni información que no tengas.",
+    "Un emoji como máximo, y solo si encaja de forma natural.",
+    "Para reservas y cancelaciones → SIEMPRE el link de Restoo. NUNCA el teléfono.",
+    "Si alguien quiere el menú completo, dáselo ordenado y claro.",
+    "Si alguien pregunta si estás abierto AHORA → usa la información de contexto del sistema.",
+    "FORMATO: Solo texto plano. NO uses ** para negrita, NO uses # para títulos, NO uses markdown. Usa • para listas. Los números de teléfono escríbelos tal cual sin +34: {{telefono_display}}."
+  ]
+}
