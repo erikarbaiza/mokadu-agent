@@ -72,7 +72,7 @@ async function askAgent(phone, message) {
     return res.data.reply;
   } catch (err) {
     console.error("❌ Error al contactar el agente:", err.message);
-    return `Ahora mismo no puedo responder. Llámanos al ${FALLBACK_PHONE} 🙏`;
+    return `Ahora estamos ocupados, pero te respondemos en breve 🙏`;
   }
 }
 
@@ -143,11 +143,15 @@ async function startBot() {
   });
 
   // Detectar respuestas manuales del equipo → pausar bot para ese cliente
+  // Solo mensajes recientes (< 2 min) para ignorar el sync histórico inicial
   sock.ev.on("messages.upsert", async ({ messages, type }) => {
     if (type !== "notify") return;
 
+    const now = Math.floor(Date.now() / 1000);
     for (const msg of messages) {
-      // Si el equipo envía un mensaje a un cliente (1-a-1, no grupo), pausar bot
+      const msgTs = msg.messageTimestamp || 0;
+      if (now - msgTs > 120) continue; // ignorar mensajes con más de 2 min de antigüedad
+
       if (
         msg.key.fromMe &&
         !msg.key.remoteJid.endsWith("@g.us") &&
