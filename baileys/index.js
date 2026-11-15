@@ -40,6 +40,9 @@ const AGENT_URL = process.env.AGENT_URL || `http://localhost:${process.env.PORT 
 const RECONNECT_DELAY_MS = 5000;
 const MANUAL_PAUSE_MS = 30 * 60 * 1000; // 30 minutos
 
+// Rastrear mensajes enviados por el bot para no confundirlos con respuestas manuales
+const botSentTo = new Set(); // JIDs a los que el bot acaba de responder
+
 const logger = pino({ level: "warn" }); // "info" para más detalle
 
 // ── Pausa manual: si el equipo responde a mano, el bot se aparta 4h ───────────
@@ -155,7 +158,8 @@ async function startBot() {
       if (
         msg.key.fromMe &&
         !msg.key.remoteJid.endsWith("@g.us") &&
-        !isJidBroadcast(msg.key.remoteJid)
+        !isJidBroadcast(msg.key.remoteJid) &&
+        !botSentTo.has(msg.key.remoteJid) // ignorar mensajes que envió el propio bot
       ) {
         setManualPause(msg.key.remoteJid);
       }
@@ -185,6 +189,8 @@ async function startBot() {
       await sock.sendPresenceUpdate("composing", phone);
       const reply = await askAgent(phone, text);
       await sock.sendPresenceUpdate("paused", phone);
+      botSentTo.add(phone);
+      setTimeout(() => botSentTo.delete(phone), 10000); // limpiar tras 10s
       await sock.sendMessage(phone, { text: reply });
 
       console.log(`💬 Bot → ${phone}: ${reply}\n`);
