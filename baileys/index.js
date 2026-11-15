@@ -38,7 +38,7 @@ const qrcode = require("qrcode-terminal");
 
 const AGENT_URL = process.env.AGENT_URL || `http://localhost:${process.env.PORT || 8000}/respond`;
 const RECONNECT_DELAY_MS = 5000;
-const MANUAL_PAUSE_MS = 4 * 60 * 60 * 1000; // 4 horas
+const MANUAL_PAUSE_MS = 30 * 60 * 1000; // 30 minutos
 
 const logger = pino({ level: "warn" }); // "info" para más detalle
 
