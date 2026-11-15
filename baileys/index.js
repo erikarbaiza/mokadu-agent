@@ -38,8 +38,27 @@ const qrcode = require("qrcode-terminal");
 
 const AGENT_URL = process.env.AGENT_URL || `http://localhost:${process.env.PORT || 8000}/respond`;
 const RECONNECT_DELAY_MS = 5000;
+const MANUAL_PAUSE_MS = 4 * 60 * 60 * 1000; // 4 horas
 
 const logger = pino({ level: "warn" }); // "info" para más detalle
+
+// ── Pausa manual: si el equipo responde a mano, el bot se aparta 4h ───────────
+const manualOverride = new Map(); // phone → timestamp hasta el que está pausado
+
+function setManualPause(phone) {
+  manualOverride.set(phone, Date.now() + MANUAL_PAUSE_MS);
+  console.log(`⏸  Bot pausado 4h para ${phone} (respuesta manual detectada)`);
+}
+
+function isPaused(phone) {
+  const until = manualOverride.get(phone);
+  if (!until) return false;
+  if (Date.now() > until) {
+    manualOverride.delete(phone);
+    return false;
+  }
+  return true;
+}
 
 // ── Llamada al agente Python ──────────────────────────────────────────────────
 
@@ -123,7 +142,23 @@ async function startBot() {
     }
   });
 
-  // Procesar mensajes entrantes
+  // Detectar respuestas manuales del equipo → pausar bot para ese cliente
+  sock.ev.on("messages.upsert", async ({ messages, type }) => {
+    if (type !== "notify") return;
+
+    for (const msg of messages) {
+      // Si el equipo envía un mensaje a un cliente (1-a-1, no grupo), pausar bot
+      if (
+        msg.key.fromMe &&
+        !msg.key.remoteJid.endsWith("@g.us") &&
+        !isJidBroadcast(msg.key.remoteJid)
+      ) {
+        setManualPause(msg.key.remoteJid);
+      }
+    }
+  });
+
+  // Procesar mensajes entrantes de clientes
   sock.ev.on("messages.upsert", async ({ messages, type }) => {
     if (type !== "notify") return;
 
@@ -131,17 +166,20 @@ async function startBot() {
       if (shouldIgnore(msg)) continue;
 
       const phone = msg.key.remoteJid;
-      const text = extractText(msg);
 
+      // Si el equipo lleva la conversación manualmente, el bot no interviene
+      if (isPaused(phone)) {
+        console.log(`⏭  [${phone}] en modo manual, bot silenciado`);
+        continue;
+      }
+
+      const text = extractText(msg);
       if (!text || !text.trim()) continue;
 
       console.log(`📩 [${new Date().toLocaleTimeString()}] ${phone}: ${text}`);
 
-      // Indicador "escribiendo..."
       await sock.sendPresenceUpdate("composing", phone);
-
       const reply = await askAgent(phone, text);
-
       await sock.sendPresenceUpdate("paused", phone);
       await sock.sendMessage(phone, { text: reply });
 
