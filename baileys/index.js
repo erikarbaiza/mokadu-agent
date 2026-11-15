@@ -32,16 +32,44 @@ const {
   isJidBroadcast,
 } = require("@whiskeysockets/baileys");
 
+const http = require("http");
 const axios = require("axios");
 const pino = require("pino");
 const qrcode = require("qrcode-terminal");
+const QRCode = require("qrcode");
 
 const AGENT_URL = process.env.AGENT_URL || `http://localhost:${process.env.PORT || 8000}/respond`;
 const RECONNECT_DELAY_MS = 5000;
 const MANUAL_PAUSE_MS = 30 * 60 * 1000; // 30 minutos
+const HTTP_PORT = process.env.BAILEYS_PORT || process.env.PORT || 3000;
 
 // Rastrear mensajes enviados por el bot para no confundirlos con respuestas manuales
 const botSentTo = new Set(); // JIDs a los que el bot acaba de responder
+
+// ── Servidor HTTP mínimo: health check + QR para escanear desde el navegador ──
+let _lastQR = null;
+
+http.createServer(async (req, res) => {
+  if (req.url === "/qr") {
+    if (!_lastQR) {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end("<h2>✅ Bot ya conectado — no hay QR pendiente</h2>");
+      return;
+    }
+    const imgData = await QRCode.toDataURL(_lastQR);
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    res.end(`<!DOCTYPE html><html><body style="text-align:center;font-family:sans-serif">
+      <h2>Escanea con el WhatsApp del restaurante</h2>
+      <img src="${imgData}" style="max-width:300px"><br>
+      <small>Recarga la página si el QR expira</small>
+    </body></html>`);
+  } else {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ status: "ok", connected: _lastQR === null }));
+  }
+}).listen(HTTP_PORT, () => {
+  console.log(`🌐 Servidor HTTP escuchando en puerto ${HTTP_PORT} (GET /qr para escanear)`);
+});
 
 const logger = pino({ level: "warn" }); // "info" para más detalle
 
@@ -123,8 +151,10 @@ async function startBot() {
   // Gestión de conexión
   sock.ev.on("connection.update", ({ connection, lastDisconnect, qr }) => {
     if (qr) {
+      _lastQR = qr;
       console.log("\n📱 Escanea este QR con el WhatsApp del restaurante:\n");
       qrcode.generate(qr, { small: true });
+      console.log(`\n🌐 O abre en el navegador: http://localhost:${HTTP_PORT}/qr\n`);
     }
 
     if (connection === "close") {
@@ -141,6 +171,7 @@ async function startBot() {
     }
 
     if (connection === "open") {
+      _lastQR = null;
       console.log("✅ MOKADU Bot conectado a WhatsApp y listo para responder\n");
     }
   });
